@@ -4,11 +4,27 @@ function followdylson_theme_support(){
 
     // Adds dynamic title tag support
     add_theme_support('title-tag');
+    add_theme_support('custom-logo');
 
 }
 
 add_action('after_setup_theme', 'followdylson_theme_support');
 
+
+function followdylson_menus(){
+
+    // allows us to add menu locations
+    $locations = array(
+        'primary' => 'desktop primary left sidebar',
+        'footer' => 'footer menu items'
+    );
+
+    // allows us to set up menus in the appearance section
+    register_nav_menus($locations);
+
+}
+
+add_action('init', 'followdylson_menus');
 
 
 function followdylson_register_styles(){
