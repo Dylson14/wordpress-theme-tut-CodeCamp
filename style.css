@@ -62,6 +62,9 @@ body {
 a{
     color: var(--pink);
 }
+.new-white a{
+    color: var(--white);
+}
 h1,
 h2,
 h3,
